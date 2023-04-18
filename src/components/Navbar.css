@@ -1,0 +1,10 @@
+.my-nav-dropdown {
+    color: white;
+  }
+  .dropdown>a::after {
+    color: white;
+}
+.navbar-toggler-icon {
+    color: red;
+  }
+  
