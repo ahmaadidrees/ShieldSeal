@@ -3,19 +3,25 @@ import { Container, Form, Button } from 'react-bootstrap';
 
 function ContactUs() {
   const [name, setName] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
   const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [address, setAddress] = useState('');
+  const [notes, setNotes] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
     // Here you can add the code to submit the form data to your backend or API
     console.log('Name:', name);
+    console.log('Phone Number:', phoneNumber);
     console.log('Email:', email);
-    console.log('Message:', message);
+    console.log('Address:', address);
+    console.log('Notes:', notes);
     // After submitting the form data, you can clear the state variables
     setName('');
+    setPhoneNumber('');
     setEmail('');
-    setMessage('');
+    setAddress('');
+    setNotes('');
   };
 
   return (
@@ -24,7 +30,7 @@ function ContactUs() {
       <h1>Contact Us</h1></center>
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formName">
-          <Form.Label>Name</Form.Label>
+          <Form.Label>Name*</Form.Label>
           <Form.Control
             type="text"
             placeholder="Enter your name"
@@ -34,8 +40,19 @@ function ContactUs() {
           />
         </Form.Group>
 
+        <Form.Group className="mb-3" controlId="formPhoneNumber">
+          <Form.Label>Phone Number*</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Enter your phone number"
+            value={phoneNumber}
+            onChange={(event) => setPhoneNumber(event.target.value)}
+            required
+          />
+        </Form.Group>
+
         <Form.Group className="mb-3" controlId="formEmail">
-          <Form.Label>Email</Form.Label>
+          <Form.Label>Email*</Form.Label>
           <Form.Control
             type="email"
             placeholder="Enter your email"
@@ -45,15 +62,24 @@ function ContactUs() {
           />
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formMessage">
-          <Form.Label>Message</Form.Label>
+        <Form.Group className="mb-3" controlId="formAddress">
+          <Form.Label>Address</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Enter your address"
+            value={address}
+            onChange={(event) => setAddress(event.target.value)}
+          />
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="formNotes">
+          <Form.Label>Notes</Form.Label>
           <Form.Control
             as="textarea"
             rows={3}
-            placeholder="Enter your message"
-            value={message}
-            onChange={(event) => setMessage(event.target.value)}
-            required
+            placeholder="Enter any additional notes"
+            value={notes}
+            onChange={(event) => setNotes(event.target.value)}
           />
         </Form.Group>
 
