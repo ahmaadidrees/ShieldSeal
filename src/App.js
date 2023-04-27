@@ -1,20 +1,17 @@
-import AboutUs from './components/AboutUs';
-import ContactUs from './components/ContactUs';
-import Footer from './components/Footer';
-import Hero from './components/Hero';
-import HeroSection from './components/HeroSection';
-import Navbar from './components/Navbar';
-import Services from './components/Services';
+import SealcoatingPage from './components/SealcoatingPage';
+import Home from './pages/Home';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-     <HeroSection/>
-      <Services />
-      <AboutUs />
-      <ContactUs />
-      <Footer/>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/sealcoat" element={<SealcoatingPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

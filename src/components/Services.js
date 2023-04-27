@@ -1,50 +1,48 @@
 import React from 'react';
-import { Container, Card, Button } from 'react-bootstrap';
+import { Container, Button } from 'react-bootstrap';
+import './Services.css';
 
 function Services() {
   return (
-    <div style={{background:"khaki", position: 'relative', bottom: '215px'}}>
-    <Container style={{height: "100vh",position: 'relative', top: '115px' }}>
-      <h1 className="text-center my-5">Our Services</h1>
+    <div className="services">
+      <Container className="services-container">
+        <h1 className="services-title">Our Services</h1>
 
-      <div className="row">
-        <div className="col-md-4">
-          <h3 className="text-center">Sealcoating</h3>
-          <Card>
-            <Card.Img variant="top" src='/Images/sealcoat.jpeg' />
-            <Card.Body>
-              <Card.Text>
-              Sealcoating is the application of a polymer based coating to asphalt pavement, to help shield it from the damaging effects of rain, high-weight vehicles, and other harmful elements such as oil and gas spills.              </Card.Text>
+        <div className="row">
+          <div className="col-md-4">
+            <h3 className="service-name">Sealcoating</h3>
+            <img src='/Images/sealcoat.jpeg' alt="Sealcoating" className="service-img" />
+            <div className="service-description">
+              <p>
+              Asphalt sealcoating on a regular basis will more than triple the life of your parking lot.
+              </p>
               <Button variant="warning" className="w-100">Learn More</Button>
-            </Card.Body>
-          </Card>
-        </div>
+            </div>
+          </div>
 
-        <div className="col-md-4">
-          <h3 className="text-center">Crack Filling</h3>
-          <Card>
-            <Card.Img variant="top" src='/Images/crackfilling.jpeg' />
-            <Card.Body>
-              <Card.Text>
-              Crack sealing is the process of filling cracks in asphalt with a hot rubberized crack sealer to repair the cracks and prolong the life of your asphalt pavement.              </Card.Text>
+          <div className="col-md-4">
+            <h3 className="service-name">Crack Filling</h3>
+            <img src='/Images/crackfilling.jpeg' alt="Crack Filling" className="service-img" />
+            <div className="service-description">
+              <p>
+              Crack sealing is the first line of defence against water penetrating your asphalt.
+              </p>
               <Button variant="warning" className="w-100">Learn More</Button>
-            </Card.Body>
-          </Card>
-        </div>
+            </div>
+          </div>
 
-        <div className="col-md-4">
-          <h3 className="text-center">Line Painting</h3>
-          <Card>
-            <Card.Img variant="top" src="/Images/LinePainting.jpeg" />
-            <Card.Body>
-              <Card.Text>
-              At Shield Seal we provide best in class line painting services to every kind of property owner, whether you're a small daycare or a large office park your satisfaction is our #1 priority.              </Card.Text>
+          <div className="col-md-4">
+            <h3 className="service-name">Line Painting</h3>
+            <img src="/Images/LinePainting.jpeg" alt="Line Painting" className="service-img" />
+            <div className="service-description">
+              <p>
+              Line painting makes for a functional and safe parking lot for pedestrians and vehicles.
+              </p>
               <Button variant="warning" className="w-100">Learn More</Button>
-            </Card.Body>
-          </Card>
+            </div>
+          </div>
         </div>
-      </div>
-    </Container>
+      </Container>
     </div>
   );
 }

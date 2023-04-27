@@ -1,0 +1,56 @@
+/* .services {
+    background: khaki;
+    position: relative;
+    bottom: 215px;
+  } */
+  .services {
+    background: url('/public/images/serv.jpeg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    bottom: 200px;
+    z-index: 1;
+  }
+  
+  .services:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 0, 0.7);
+    z-index: -1;
+  }
+  
+  
+  .services-container {
+    height: 85vh;
+    position: relative;
+    top: 115px;
+  }
+  
+  .services-title {
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: center;
+    margin: 2rem 0;
+  }
+  
+  .service-name {
+    text-align: center;
+  }
+  
+  .service-img {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    border-radius: 10px;
+  }
+  
+  .service-description {
+    margin-top: 1rem;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  
