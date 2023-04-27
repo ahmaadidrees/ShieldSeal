@@ -22,7 +22,7 @@
   
   .about-us-content {
     position: relative;
-    top: 150px;
+    top: 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -42,7 +42,7 @@
   
   .about-us-left h2,
   .about-us-right h2 {
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
     text-align: center;
     margin-bottom: 20px;
@@ -50,7 +50,7 @@
   
   .about-us-left p,
   .about-us-right p {
-    font-size: 16px;
+    font-size: 24px;
     line-height: 1.5;
     text-align: justify;
   }

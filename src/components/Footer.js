@@ -6,7 +6,7 @@ import { FaInstagram } from 'react-icons/fa';
 
 function Footer() {
   return (
-    <footer className="bg-dark text-white" style={{height:'220px', marginTop: '100px'}}>
+    <footer className="text-white" style={{background:'black', height:'220px', marginTop: '100px'}}>
       <Container>
         <Row className="justify-content-center mt-3">
           <Col md={12} className="d-flex justify-content-center mb-3">

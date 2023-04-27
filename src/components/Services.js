@@ -16,7 +16,7 @@ function Services() {
               <p>
               Asphalt sealcoating on a regular basis will more than triple the life of your parking lot.
               </p>
-              <Button variant="warning" className="w-100">Learn More</Button>
+              <Button onClick={()=>console.log('fuck')} variant="warning" className="service-button">Learn More</Button>
             </div>
           </div>
 
@@ -27,7 +27,7 @@ function Services() {
               <p>
               Crack sealing is the first line of defence against water penetrating your asphalt.
               </p>
-              <Button variant="warning" className="w-100">Learn More</Button>
+              <Button variant="warning" className="service-button">Learn More</Button>
             </div>
           </div>
 
@@ -38,7 +38,7 @@ function Services() {
               <p>
               Line painting makes for a functional and safe parking lot for pedestrians and vehicles.
               </p>
-              <Button variant="warning" className="w-100">Learn More</Button>
+              <Button variant="warning" className="service-button">Learn More</Button>
             </div>
           </div>
         </div>
