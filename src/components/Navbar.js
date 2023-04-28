@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect,useLayoutEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -11,7 +11,6 @@ import { FaPhone } from 'react-icons/fa';
 
 function Navbarr({isHomePage}) {
   const [scrolled, setScrolled] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       if (window.pageYOffset === 0) {
@@ -22,17 +21,22 @@ function Navbarr({isHomePage}) {
     };
 
     window.addEventListener('scroll', handleScroll);
-   
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [scrolled]);
 
+  useLayoutEffect(() => {
+    if (window.location.pathname === '/') {
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+  }, []);
+
+
   const bg = isHomePage ? 'black' : (scrolled ? 'black' : 'transparent');
   const variant = isHomePage ? 'light' : (scrolled ? 'dark' : 'light');
-
-
+ 
   return (
     <Navbar
       sticky='top'
@@ -58,22 +62,24 @@ function Navbarr({isHomePage}) {
         />
         <Navbar.Collapse id='basic-navbar-nav'>
           <Nav className='ms-auto'>
-            <Nav.Link style={{ color: 'white' }} as = {Link} to='/'>
+            <Nav.Link style={{ color: 'white' }} as = {Link} to='/' onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}}>
               Home
             </Nav.Link>
-            <Nav.Link style={{ color: 'white' }} href='#link'>
+            <Nav.Link style={{ color: 'white' }} as={Link} to='/' onClick={() => { window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' }); }}>
               About Us
             </Nav.Link>
+
+
             <NavDropdown
               className='nav-dropdown'
               title={<span className='my-nav-dropdown'>Services</span>}
               id='nav-dropdown'
             >
-              <NavDropdown.Item as = {Link} to = '/sealcoat'>Sealcoating</NavDropdown.Item>
-              <NavDropdown.Item as = {Link} to = '/crack'>Crack Filling</NavDropdown.Item>
-              <NavDropdown.Item as = {Link} to = '/line'>Line Painting</NavDropdown.Item>
+              <NavDropdown.Item as = {Link} to = '/sealcoat' onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}}>Sealcoating</NavDropdown.Item>
+              <NavDropdown.Item as = {Link} to = '/crack' onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}}>Crack Filling</NavDropdown.Item>
+              <NavDropdown.Item as = {Link} to = '/line'onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}}>Line Painting</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link style={{ color: 'white' }} href='#link'>
+            <Nav.Link as={Link} to = '/contact' onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}} style={{ color: 'white' }}>
               Contact
             </Nav.Link>
             <Nav.Link style={{ color: 'white' }} href='#link'>

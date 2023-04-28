@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Slideshow.css';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -24,7 +25,8 @@ const HeroSection = () => {
         <div className="slide-content">
           <h1 className="slide-title">Get The Most Out Of Your Asphalt Parking Lot – 100% Satisfaction!</h1>
           <h2 className="slide-subtitle">We Provide A Full Range Of Asphalt Paving, Repair, & Maintenance Services</h2>
-          <button className="free-quote">Contact Us Today</button>
+          <Link to = "/contact#top" >
+          <button className="free-quote">Contact Us Today</button></Link>
         </div>
       </div>
     </div>

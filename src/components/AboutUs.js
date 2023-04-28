@@ -1,8 +1,11 @@
 import React from 'react';
 import './AboutUs.css'
+import { Link } from 'react-router-dom';
 const AboutUs = () => {
+
+  
   return (
-    <div className="about-us">
+    <div id='about' className="about-us">
       <div className="about-us-content">
         <div className="about-us-left">
           <h2>About Us</h2>
@@ -12,6 +15,8 @@ const AboutUs = () => {
           <h2>Why Seal Tech</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam urna nec risus dapibus aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed suscipit mauris nec libero rhoncus ultrices. Praesent dignissim gravida mauris, a facilisis lorem facilisis et. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
         </div>
+        <Link to='contact'>
+          <button onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}} className="about-btn">Contact Us Today</button></Link>
       </div>
     </div>
   );

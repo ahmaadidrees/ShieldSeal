@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
+import './ContactUs.css'
 
 function ContactUs() {
   const [name, setName] = useState('');
@@ -25,9 +26,9 @@ function ContactUs() {
   };
 
   return (
-    <Container style = {{height: '100vh'}}>
+    <Container style = {{height: '100vh', position:'relative', top:"100px", paddingLeft: "100px", paddingRight: "100px"}}>
       <center>
-      <h1>Contact Us</h1></center>
+      <h1>Contact Us Today</h1></center>
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formName">
           <Form.Label>Name*</Form.Label>
@@ -83,7 +84,7 @@ function ContactUs() {
           />
         </Form.Group>
 
-        <Button variant="primary" type="submit">
+        <Button className='contact-btn' variant="warning" type="submit">
           Submit
         </Button>
       </Form>
