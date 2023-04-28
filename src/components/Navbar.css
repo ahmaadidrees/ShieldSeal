@@ -8,3 +8,27 @@
     color: red;
   }
   
+  .nav-title{
+    font-size: 24px !important;
+  }
+  @media(max-width: 767px){
+    .nav-title{
+      font-size: 20px !important;
+    }
+  }
+  @media(max-width: 480px){
+    .nav-title{
+      font-size: 12px !important;
+    }
+  }
+  @media(max-width: 380px){
+    .nav-title{
+      font-size: 0px !important;
+    }
+  }
+  @media(max-width: 340px){
+    .menu{
+      position: relative;
+      left: 20px;
+    }
+  }

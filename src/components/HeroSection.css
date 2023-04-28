@@ -3,11 +3,12 @@
     height: 100vh;
     position: relative;
     bottom: 100px;
+    margin-bottom: 200px;
   }
   
   /* Center the slideshow container vertically and horizontally */
   .slideshow-container {
-    position: relative;
+    /* position: relative; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,7 +25,7 @@
     width: 100%;
     height: 100vh;
     object-fit: cover;
-    z-index: -1;
+    z-index: 0;
   }
   
   /* Show only the active slide */
@@ -32,8 +33,9 @@
     display: none;
   }
   
+  
   /* Set the styles for the book now button */
-  .free-quote {
+  .hero-button {
     position: absolute;
     z-index: 1;
     top: 60%; /* updated value */
@@ -42,7 +44,7 @@
     padding: 12px 24px;
     background-color: transparent;
     color: #ffffff;
-    font-size: 24px;
+    font-size: 110%;
     font-weight: bold;
     border: 2px solid #ffc107;
     border-radius: 50px;
@@ -50,9 +52,30 @@
     transition: background-color 0.3s ease, color 0.3s ease;
     margin-bottom: 50px; /* added margin-bottom */
   }
-  
+  @media (max-width: 400px) {
+    .hero-button{
+      font-size: 80%;
+    }
+  }
+  /* @media (max-width: 754px) {
+   .hero-button{
+    font-size: 80%;
+   }
+  }
+  @media (max-width: 619px) {
+    .hero-button{
+     font-size: 70%;
+    }
+   }
+   @media (max-width: 607px) {
+    .hero-button{
+     font-size: 60%;
+    }
+   }
+  */
+
   /* Set the styles for the book now button on hover */
-  .free-quote:hover {
+  .hero-button:hover {
     background-color: #ffc107;
     color: #000000;
   }
@@ -76,11 +99,37 @@
   
   /* Styles for hero title */
   .hero-title {
-    font-size: 48px;
+    font-size: 420%;
     font-weight: bold;
     color: #ffffff;
     text-align: center;
-    margin-bottom: 40px; /* updated value */
+    margin-bottom: -10px; /* updated value */
+
+  }
+  @media (max-width: 900px) {
+    .hero-title{
+      font-size: 350%;
+    }
+  }
+  @media (max-width: 770px) {
+    .hero-title{
+      font-size: 300%;
+    }
+  }
+  @media (max-width: 620px) {
+    .hero-title{
+      font-size: 220%;
+    }
+  }
+  @media (max-width: 460px) {
+    .hero-title{
+      font-size: 200%;
+    }
+  }
+  @media (max-width: 430px) {
+    .hero-title{
+      font-size: 160%;
+    }
   }
   
   /* Styles for hero subtitle */
@@ -88,10 +137,26 @@
     font-size: 24px;
     color: #ffffff;
     text-align: center;
-    margin-top: 100px; /* added margin-top */
-    margin-bottom: 10px; /* added margin-bottom */
+    margin-top: 120px; /* added margin-top */
+    margin-bottom: -10px; /* added margin-bottom */
   }
   
+  @media (max-width: 1094px) {
+    .hero-subtitle{
+     font-size: 20px;
+    }
+   }
+   @media (max-width: 924px) {
+    .hero-subtitle{
+     font-size: 16px;
+    }
+   }
+   @media (max-width: 465px) {
+    .hero-subtitle{
+      font-size: 12px;
+    }
+  }
+
   /* Styles for hero content container */
   .hero-content {
     position: absolute;
@@ -101,5 +166,17 @@
     transform: translate(-50%, -50%);
     text-align: center;
     max-width: 80%;
+    white-space: nowrap;
   }
   
+  @media (max-width: 350px) {
+    .hero-title{
+      font-size: 140%;
+    }
+    .hero-button{
+      font-size: 60%;
+    }
+    .hero-subtitle{
+      font-size: 8px;
+    }
+  }

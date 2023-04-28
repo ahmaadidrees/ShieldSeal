@@ -6,6 +6,8 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Button from 'react-bootstrap/Button';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
+import { FaPhone } from 'react-icons/fa';
+
 
 function Navbarr({isHomePage}) {
   const [scrolled, setScrolled] = useState(false);
@@ -45,13 +47,14 @@ function Navbarr({isHomePage}) {
           className='d-inline-block align-top'
           alt='fuck'
         />
-        <Navbar.Brand style={{ color: 'white',fontWeight: 'bold'
+        <Navbar.Brand className='nav-title' style={{ color: 'white',fontWeight: 'bold'
  }} href='#home'>
           Shield Seal Pavement Co.
         </Navbar.Brand>
         <Navbar.Toggle
           style={{ outline: 'none' }}
           aria-controls='basic-navbar-nav'
+          className='menu'
         />
         <Navbar.Collapse id='basic-navbar-nav'>
           <Nav className='ms-auto'>
@@ -76,8 +79,10 @@ function Navbarr({isHomePage}) {
             <Nav.Link style={{ color: 'white' }} href='#link'>
               Gallery
             </Nav.Link>
+            <Nav.Link style={{ color: 'white' }} href='tel:+1234567890'>
+             <FaPhone />
+            </Nav.Link>
           </Nav>
-          <Button variant='outline-warning'>Contact Us Today</Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>

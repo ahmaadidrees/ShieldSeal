@@ -8,7 +8,8 @@
     background-size: cover;
     position: relative;
     bottom: 200px;
-    z-index: -2;
+    margin-top: -100px;
+    
   }
   
   .services:before {
@@ -19,8 +20,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 0, 0.7);
-    z-index: -3;
+    background: rgba(255, 223, 45, 0.7);
+    z-index: 0;
   }
   
   
@@ -29,6 +30,12 @@
     position: relative;
     top: 115px;
   }
+  @media (max-width: 767px) {
+    .services-container{
+      height: 150vh;
+      width: 80% !important;
+    }
+  }
   
   .services-title {
     font-weight: bold;
@@ -36,6 +43,16 @@
     text-align: center;
     margin: 2rem 0;
     font-size: 55px;
+  }
+  @media (max-width: 436px) {
+    .services-title{
+      font-size: 45px !important;
+    }
+  }
+  @media (max-width: 364px) {
+    .services-title{
+      font-size: 35px !important;
+    }
   }
   
   .service-name {
@@ -57,22 +74,24 @@
     text-align: justify;
     text-justify: inter-word;
     font-size: 16px;
+    font-weight: bold;
   }
-  
+ 
   .service-button {
     background-color: #ffc107;
     color: black;
     padding: 10px;
-    border: none;
-    border-radius: 5px;
     font-size: 16px;
     line-height: 1.5;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
     width: 100%;
+    z-index: 20;
+    border: none !important;
   }
   .services .service-button:hover {
-    background-color: black;
-    color: #ffc107;
+    background-color: black !important;
+    color: #ffc107 !important;
+    border: none !important;
   }
   
