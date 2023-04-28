@@ -27,11 +27,11 @@ function Navbarr({isHomePage}) {
     };
   }, [scrolled]);
 
-  useLayoutEffect(() => {
-    if (window.location.pathname === '/') {
-      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-    }
-  }, []);
+  // useLayoutEffect(() => {
+  //   if (window.location.pathname === '/') {
+  //     window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+  //   }
+  // }, []);
 
 
   const bg = isHomePage ? 'black' : (scrolled ? 'black' : 'transparent');
@@ -45,14 +45,14 @@ function Navbarr({isHomePage}) {
       variant={variant}
     >
       <Container>
+        <Link to='/' onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}}>
         <img
           style={{ height: '80px', width: '130px' }}
           src='/images/shieldseal.png'
           className='d-inline-block align-top'
           alt='fuck'
-        />
-        <Navbar.Brand className='nav-title' style={{ color: 'white',fontWeight: 'bold'
- }} href='#home'>
+        /></Link>
+        <Navbar.Brand className='nav-title' style={{ color: 'white',fontWeight: 'bold'}} as = {Link} to='/' onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}}>
           Shield Seal Pavement Co.
         </Navbar.Brand>
         <Navbar.Toggle
@@ -65,7 +65,7 @@ function Navbarr({isHomePage}) {
             <Nav.Link style={{ color: 'white' }} as = {Link} to='/' onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}}>
               Home
             </Nav.Link>
-            <Nav.Link style={{ color: 'white' }} as={Link} to='/' onClick={() => { window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' }); }}>
+            <Nav.Link style={{ color: 'white' }} as={Link} to='/' onClick={() => { setTimeout(() => {document.getElementById('about').scrollIntoView({ behavior: 'smooth' });}, 200);  }}>
               About Us
             </Nav.Link>
 
