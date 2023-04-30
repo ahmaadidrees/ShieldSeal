@@ -5,12 +5,13 @@
   src: url('/public/my-font.ttf') format('truetype');
 }
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Voltaire&display=swap');
 
 /* Set the height of the hero section */
 .hero-section {
     height: 100vh;
     position: relative;
-    bottom: 100px;
+    bottom: 96px;
     margin-bottom: 200px;
     overflow-x: hidden;
   }
@@ -61,8 +62,7 @@
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
     margin-bottom: 50px; /* added margin-bottom */
-    font-family: 'Poiret One', cursive;
-  }
+    font-family: 'Voltaire', sans-serif;  }
   /* @media (max-width: 400px) {
     .hero-button{
       font-size: 80%;
@@ -98,7 +98,7 @@
     text-align: center;
     margin-top: 120px; /* added margin-top */
     margin-bottom: -10px; /* added margin-bottom */
-    font-family: 'Poiret One', cursive;    }
+    font-family: 'Voltaire', sans-serif;     }
   
   
 

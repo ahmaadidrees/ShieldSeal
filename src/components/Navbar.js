@@ -63,7 +63,7 @@ function Navbarr({isHomePage}) {
           Shield Seal Pavement Co.
         </Navbar.Brand> */}
         <Navbar.Toggle
-          style={{ outline: 'none' }}
+          style={{ outline: 'none !important' }}
           aria-controls='basic-navbar-nav'
           className='menu'
         />

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Voltaire&display=swap');
+
 .footer-btn {
     padding: 12px 24px;
     background-color: #ffc107;;
@@ -19,9 +21,26 @@
   .text-yellow{
     color:#ffc107;
   }
-  @media (max-width: 1290px) {
+  /* @media (max-width: 1290px) {
     .footer-row {
+     
+    }
+  } */
+  .foot{
+    font-family: 'Voltaire', sans-serif;
+    white-space: nowrap;
+    flex-direction: column;
+  }
+  @media (max-width: 1190px) {
+    .foot .row {
       flex-direction: column;
+    }
+    .foot .col {
+      margin-bottom: 2rem;
+    }
+    .footer-container{
+        position: relative;
+        right: 100px;
     }
   }
   

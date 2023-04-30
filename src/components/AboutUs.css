@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Voltaire&display=swap');
 .about-us {
     position: relative;
    
@@ -7,8 +8,8 @@
     bottom: 250px;
     z-index: 1;
     margin-bottom: -350px;
-    font-family: 'Poiret One', cursive;
-    padding-bottom: 200px;
+    font-family: 'Voltaire', sans-serif;
+        padding-bottom: 200px;
   }
   
   .about-us:before {
