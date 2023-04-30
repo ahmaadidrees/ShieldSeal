@@ -31,6 +31,10 @@
     white-space: nowrap;
     flex-direction: column;
   }
+  .footer-container{
+    position: relative;
+    top: 70px;
+  }
   @media (max-width: 1190px) {
     .foot .row {
       flex-direction: column;

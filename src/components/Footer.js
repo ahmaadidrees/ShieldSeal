@@ -7,7 +7,7 @@ import './Footer.css'
 
 function Footer() {
   return (
-    <footer className='foot' style={{background: 'black', color: 'white', padding: '150px',}}>
+    <footer className='foot' style={{background: 'black', color: 'white', padding: '70px'}}>
       <Container className='footer-container'>
         <Row>
           <Col sm={12} md={3} className="mb-4" style={{paddingRight:'50px',paddingLeft:'50px'}}>
