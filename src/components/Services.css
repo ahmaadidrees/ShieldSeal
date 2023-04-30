@@ -1,18 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+
 /* .services {
     background: khaki;
     position: relative;
     bottom: 215px;
   } */
   .services {
-    background: url('/public/images/serv.jpeg') no-repeat center center;
-    background-size: cover;
+    /* background: url('/public/images/serv.jpeg') no-repeat center center; */
+    /* background-size: cover; */
+    background: white;
     position: relative;
     bottom: 200px;
     margin-top: -100px;
+    font-family: 'Poiret One', cursive;
+    font-weight: bolder;    
     
   }
-  
-  .services:before {
+ 
+  /* .services:before {
     content: "";
     display: block;
     position: absolute;
@@ -22,13 +29,15 @@
     height: 100%;
     background: rgba(255, 223, 45, 0.7);
     z-index: 0;
-  }
+  } */
   
   
   .services-container {
-    height: 85vh;
+    /* height: 85vh; */
     position: relative;
     top: 115px;
+    padding-bottom: 200px;
+    margin-bottom: 150px;
   }
   @media (max-width: 767px) {
     .services-container{
@@ -38,8 +47,8 @@
   }
   
   .services-title {
-    font-weight: bold;
-    text-decoration: underline;
+    font-weight: bolder;
+    /* text-decoration: underline; */
     text-align: center;
     margin: 2rem 0;
     font-size: 55px;

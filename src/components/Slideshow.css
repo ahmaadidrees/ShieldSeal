@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 /* Set the height of the hero section */
 .slide-section {
     height: 60vh;
     position: relative;
     bottom: 200px;
+    overflow: hidden;
   }
   
   /* Center the slideshow container vertically and horizontally */
@@ -103,6 +106,7 @@
     transform: translate(-50%, -50%);
     text-align: center;
     max-width: 100%;
+    font-family: 'Poiret One', cursive;
   }
   @media (max-width: 1397px) {
     .slide-title{

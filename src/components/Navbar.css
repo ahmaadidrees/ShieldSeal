@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
 .my-nav-dropdown {
     color: white;
   }
@@ -7,11 +10,26 @@
 .navbar-toggler-icon {
     color: red;
   }
+  .ms-auto{
+    font-family: 'Poiret One', cursive !important;
+    font-weight: bolder !important;
+    /* transition: color 0.3s ease-out !important; */
+
+  }
+ 
+  .nav-link, .my-nav-dropdown {
+    color: white;
+    transition: color 0.3s ease-out !important;
+  }
+  
+  .nav-link:hover, .my-nav-dropdown:hover {
+    color: #ffc107 !important;
+    }
   
   .nav-title{
     font-size: 24px !important;
   }
-  @media(max-width: 767px){
+  /* @media(max-width: 767px){
     .nav-title{
       font-size: 20px !important;
     }
@@ -31,4 +49,4 @@
       position: relative;
       left: 20px;
     }
-  }
+  } */

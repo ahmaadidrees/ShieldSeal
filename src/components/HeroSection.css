@@ -1,9 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Boogaloo&family=Bungee+Shade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@font-face {
+  font-family: 'My Font';
+  src: url('/public/my-font.ttf') format('truetype');
+}
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
 /* Set the height of the hero section */
 .hero-section {
     height: 100vh;
     position: relative;
     bottom: 100px;
     margin-bottom: 200px;
+    overflow-x: hidden;
   }
   
   /* Center the slideshow container vertically and horizontally */
@@ -14,7 +23,7 @@
     justify-content: center;
     height: 100%;
     overflow: hidden;
-    min-width: 348px;
+    width: 100%;
   }
   
   /* Set the size of the images and center them */
@@ -36,6 +45,7 @@
   
   /* Set the styles for the book now button */
   .hero-button {
+    /* font-family: 'Lilita One', cursive; */
     position: absolute;
     z-index: 1;
     top: 60%; /* updated value */
@@ -44,19 +54,96 @@
     padding: 12px 24px;
     background-color: transparent;
     color: #ffffff;
-    font-size: 110%;
-    font-weight: bold;
+    font-size:2vw;
+    font-weight: bolder;
     border: 2px solid #ffc107;
     border-radius: 50px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
     margin-bottom: 50px; /* added margin-bottom */
+    font-family: 'Poiret One', cursive;
   }
-  @media (max-width: 400px) {
+  /* @media (max-width: 400px) {
     .hero-button{
       font-size: 80%;
     }
+  } */
+  
+
+  /* Set the styles for the book now button on hover */
+  .hero-button:hover {
+    background-color: #ffc107;
+    color: #000000;
   }
+  
+  
+  /* Styles for hero title */
+  .hero-title {
+    font-size: 5vw;
+    /* font-weight: bold; */
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: -10px; /* updated value */
+  /* font-family: 'Boogaloo', cursive; */
+  /* font-family: 'Bungee Shade', cursive; */
+  font-family: 'My Font', sans-serif;
+
+  }
+  
+  
+  /* Styles for hero subtitle */
+  .hero-subtitle {
+    font-size: 3vw;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 120px; /* added margin-top */
+    margin-bottom: -10px; /* added margin-bottom */
+    font-family: 'Poiret One', cursive;    }
+  
+  
+
+  /* Styles for hero content container */
+  .hero-content {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    max-width: 80%;
+    white-space: nowrap;
+  }
+  @media (min-width: 1720px) {
+    .hero-title{
+      font-size: 86px;
+    }
+    .hero-button{
+      font-size: 34.4px;
+    }
+    .hero-subtitle{
+      font-size: 51.6px;
+    }
+  }
+
+  /* @media screen and (max-width: 768px) {
+    .hero-title {
+      font-size: 2rem;
+    }
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .hero-title {
+      font-size: 3rem;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .hero-title {
+      font-size: 4vw;
+    }
+  }
+   */
+
   /* @media (max-width: 754px) {
    .hero-button{
     font-size: 80%;
@@ -73,15 +160,8 @@
     }
    }
   */
-
-  /* Set the styles for the book now button on hover */
-  .hero-button:hover {
-    background-color: #ffc107;
-    color: #000000;
-  }
-  
   /* Media query to ensure hero image takes up full width when screen is between 620px and 708px */
-  @media (min-width: 620px) {
+  /* @media (min-width: 620px) {
     .slideshow-container {
       min-width: 715px;
     }
@@ -95,18 +175,8 @@
     .slideshow-container {
       min-width: 1450px;
     }
-  }
-  
-  /* Styles for hero title */
-  .hero-title {
-    font-size: 420%;
-    font-weight: bold;
-    color: #ffffff;
-    text-align: center;
-    margin-bottom: -10px; /* updated value */
-
-  }
-  @media (max-width: 900px) {
+  } */
+  /* @media (max-width: 900px) {
     .hero-title{
       font-size: 350%;
     }
@@ -131,17 +201,22 @@
       font-size: 160%;
     }
   }
-  
-  /* Styles for hero subtitle */
-  .hero-subtitle {
-    font-size: 24px;
-    color: #ffffff;
-    text-align: center;
-    margin-top: 120px; /* added margin-top */
-    margin-bottom: -10px; /* added margin-bottom */
+  @media (max-width: 1212px) {
+    .hero-title{
+      font-size: 360%;
+    }
   }
-  
-  @media (max-width: 1094px) {
+  @media (max-width: 1040px) {
+    .hero-title{
+      font-size: 320%;
+    }
+  }
+  @media (min-width: 1450px) {
+    .hero-title{
+      font-size: 500%;
+    }
+  } */
+  /* @media (max-width: 1094px) {
     .hero-subtitle{
      font-size: 20px;
     }
@@ -155,21 +230,8 @@
     .hero-subtitle{
       font-size: 12px;
     }
-  }
-
-  /* Styles for hero content container */
-  .hero-content {
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    max-width: 80%;
-    white-space: nowrap;
-  }
-  
-  @media (max-width: 350px) {
+  } */
+  /* @media (max-width: 350px) {
     .hero-title{
       font-size: 140%;
     }
@@ -179,4 +241,4 @@
     .hero-subtitle{
       font-size: 8px;
     }
-  }
+  } */

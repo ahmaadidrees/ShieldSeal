@@ -1,0 +1,27 @@
+.footer-btn {
+    padding: 12px 24px;
+    background-color: #ffc107;;
+    color: black;
+    font-size: 1vw;
+    white-space: nowrap;
+    font-weight: bold;
+    border: 2px solid #ffc107;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-bottom: 50px; /* added margin-bottom */
+  }
+  .footer-btn:hover {
+    background-color: black !important;
+    color: #ffc107 !important;
+    border: none !important;
+  }
+  .text-yellow{
+    color:#ffc107;
+  }
+  @media (max-width: 1290px) {
+    .footer-row {
+      flex-direction: column;
+    }
+  }
+  

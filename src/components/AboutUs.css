@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 .about-us {
     position: relative;
-    height: 70vh;
+   
     background: url('/public/images/about.jpeg') no-repeat center center;
     background-size: cover;
     bottom: 250px;
     z-index: 1;
     margin-bottom: -350px;
+    font-family: 'Poiret One', cursive;
+    padding-bottom: 200px;
   }
   
   .about-us:before {
@@ -22,7 +25,7 @@
   
   .about-us-content {
     position: relative;
-    top: 100px;
+    top: 75px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

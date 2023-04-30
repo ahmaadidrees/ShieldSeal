@@ -1,11 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Button } from 'react-bootstrap';
 import './Services.css';
 import { Link } from 'react-router-dom';
 
 function Services() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset;
+      const windowHeight = window.innerHeight;
+      const servicesTop = document.querySelector('.services').offsetTop;
+
+      if (scrollTop + windowHeight > servicesTop) {
+        setIsVisible(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div className="services">
+    <div className={`services ${isVisible ? 'services--visible' : ''}`}>
       <Container className="services-container">
         <h1 className="services-title">Our Services</h1>
 
@@ -17,7 +34,7 @@ function Services() {
               <p>
               Asphalt sealcoating on a regular basis will more than triple the life of your parking lot.
               </p>
-              <Button as = {Link} to = '/sealcoat' onClick={()=>console.log('fuck')} variant="warning" className="service-button">Learn More</Button>
+              <Button as = {Link} to = '/sealcoat' onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}} variant="warning" className="service-button">Learn More</Button>
             </div>
           </div>
 
@@ -28,7 +45,7 @@ function Services() {
               <p>
               Crack sealing is the first line of defence against water penetrating your asphalt.
               </p>
-              <Button as = {Link} to = '/crack' variant="warning" className="service-button">Learn More</Button>
+              <Button as = {Link} to = '/crack' variant="warning" className="service-button" onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}} >Learn More</Button>
             </div>
           </div>
 
@@ -39,7 +56,7 @@ function Services() {
               <p>
               Line painting makes for a functional and safe parking lot for pedestrians and vehicles.
               </p>
-              <Button as = {Link} to= '/line'  variant="warning" className="service-button">Learn More</Button>
+              <Button as = {Link} to= '/line'  variant="warning" className="service-button" onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}} >Learn More</Button>
             </div>
           </div>
         </div>

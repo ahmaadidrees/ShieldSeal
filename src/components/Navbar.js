@@ -1,9 +1,8 @@
-import { useState, useEffect,useLayoutEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import Button from 'react-bootstrap/Button';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 import { FaPhone } from 'react-icons/fa';
@@ -11,6 +10,11 @@ import { FaPhone } from 'react-icons/fa';
 
 function Navbarr({isHomePage}) {
   const [scrolled, setScrolled] = useState(false);
+  const [isNavExpanded, setIsNavExpanded] = useState(false);
+  const handleNavToggle = () => {
+    setIsNavExpanded(!isNavExpanded);
+  };
+  
   useEffect(() => {
     const handleScroll = () => {
       if (window.pageYOffset === 0) {
@@ -27,22 +31,25 @@ function Navbarr({isHomePage}) {
     };
   }, [scrolled]);
 
-  // useLayoutEffect(() => {
-  //   if (window.location.pathname === '/') {
-  //     window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-  //   }
-  // }, []);
+  const handleNavClose = () => {
+    setIsNavExpanded(false);
+  }
 
 
-  const bg = isHomePage ? 'black' : (scrolled ? 'black' : 'transparent');
-  const variant = isHomePage ? 'light' : (scrolled ? 'dark' : 'light');
+  const bg = isHomePage || isNavExpanded ? 'black' : (scrolled ? 'black' : 'transparent');
+ 
  
   return (
     <Navbar
       sticky='top'
       bg={bg}
       expand='lg'
-      variant={variant}
+      expanded={isNavExpanded}
+    onToggle={handleNavToggle}
+      variant={'dark'}
+      style={{
+        transition: 'background-color 0.5s ease-out'
+      }}
     >
       <Container>
         <Link to='/' onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}}>
@@ -52,9 +59,9 @@ function Navbarr({isHomePage}) {
           className='d-inline-block align-top'
           alt='fuck'
         /></Link>
-        <Navbar.Brand className='nav-title' style={{ color: 'white',fontWeight: 'bold'}} as = {Link} to='/' onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}}>
+        {/* <Navbar.Brand className='nav-title' style={{ color: 'white',fontWeight: 'bold'}} as = {Link} to='/' onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}}>
           Shield Seal Pavement Co.
-        </Navbar.Brand>
+        </Navbar.Brand> */}
         <Navbar.Toggle
           style={{ outline: 'none' }}
           aria-controls='basic-navbar-nav'
@@ -62,10 +69,10 @@ function Navbarr({isHomePage}) {
         />
         <Navbar.Collapse id='basic-navbar-nav'>
           <Nav className='ms-auto'>
-            <Nav.Link style={{ color: 'white' }} as = {Link} to='/' onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}}>
+            <Nav.Link className='nav-link' style={{ color: 'white' }} as = {Link} to='/' onClick={()=>{ handleNavClose(); window.scrollTo({ top: 0, behavior: 'smooth' });}}>
               Home
             </Nav.Link>
-            <Nav.Link style={{ color: 'white' }} as={Link} to='/' onClick={() => { setTimeout(() => {document.getElementById('about').scrollIntoView({ behavior: 'smooth' });}, 200);  }}>
+            <Nav.Link className='nav-link' style={{ color: 'white' }} as={Link} to='/' onClick={() => { setTimeout(() => { handleNavClose(); document.getElementById('about').scrollIntoView({ behavior: 'smooth' });}, 200);  }}>
               About Us
             </Nav.Link>
 
@@ -86,7 +93,7 @@ function Navbarr({isHomePage}) {
               Gallery
             </Nav.Link>
             <Nav.Link style={{ color: 'white' }} href='tel:+1234567890'>
-             <FaPhone />
+             <FaPhone style={{height:'30px', width:'30px'}} />
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

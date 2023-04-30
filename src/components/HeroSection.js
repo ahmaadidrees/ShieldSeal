@@ -25,8 +25,8 @@ const HeroSection = () => {
         <div className="hero-content">
           <h1 className="hero-title">COVER YOUR ASPHALT</h1>
           <h2 className="hero-subtitle">The East Bay’s #1 Pavement Maintenance Company</h2>
-          <Link to='contact'>
-          <button className="hero-button">Contact Us Today</button></Link>
+          <Link to='contact'></Link>
+          <button className="hero-button">Contact Us Today</button>
         </div>
       </div>
     </div>
