@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Voltaire&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 
 /* .services {
     background: khaki;
@@ -14,7 +19,7 @@
     position: relative;
     bottom: 196px;
     margin-top: -100px;
-    font-family: 'Voltaire', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: bolder;  
     
   }
@@ -33,11 +38,11 @@
   }
   
   .services-container {
-    height: 600px;
     position: relative;
-    top: 50px;
+    top: -5px;
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
+    padding-bottom: 40px;
     /* padding-bottom: 0px; */
   }
  
@@ -49,16 +54,16 @@
   
   @media (max-width: 767px) {
     .services-container{
-      height: 1500px;
+      
       width: 80% !important;
     }
   }
-  @media (max-width: 500px) {
+  /* @media (max-width: 500px) {
     .services-container{
       height: 1400px;
     }
-  }
-  @media (max-width: 400px) {
+  } */
+  /* @media (max-width: 400px) {
     .services-container{
       height: 1300px;
     }
@@ -67,14 +72,26 @@
     .services-container{
       height: 1200px;
     }
+  } */
+  .service-description {
+    margin-top: 1rem;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
-  
   .services-title {
     font-weight: bolder;
     /* text-decoration: underline; */
     text-align: center;
     margin: 2rem 0;
-    font-size: 55px;
+    font-size: 8vw;
+    padding-top: 30px !important;
+    /* font-family: 'Russo One', sans-serif; */
+    font-family: 'Electrolize', sans-serif;
+    text-shadow: -2px -2px 0 #ec5d24, 2px -2px 0 #ec5d24, -2px 2px 0 #ec5d24, 2px 2px 0 #ec5d24;
+
   }
   @media (max-width: 436px) {
     .services-title{
@@ -89,44 +106,85 @@
   
   .service-name {
     text-align: center;
-    font-size: 35px;
-    font-weight: bold;
+    font-size: 55px;
+    font-weight: 900 !important;
+    text-shadow: 0 0 2px #000, 0 0 0 #000, 0 0 2px #000;
+
+    /* font-family: 'Plus Jakarta Sans', sans-serif; */
+    font-family: 'Electrolize', sans-serif;
+    /* text-shadow: -2px -2px 0 #ec5d24, 2px -2px 0 #ec5d24, -2px 2px 0 #ec5d24, 2px 2px 0 #ec5d24; */
+
   }
-  
+  @media(max-width:1199px){
+    .service-name{
+      font-size: 45px;
+    }
+    .service-description{
+      font-size: 18px;
+    }
+  }
+  @media(max-width:991px){
+    .service-name{
+      font-size: 35px;
+    }
+    .service-description{
+      font-size: 14.5px;
+    }
+  }
+  @media(max-width: 767px) {
+    .services-title{
+      font-size: 9vw;
+    }
+    .service-name{
+      font-size: 8vw;
+    }
+    .service-description{
+      font-size: 18px;
+    }
+  }
+  @media(max-width:285px) {
+    .services-title{
+      font-size: 30px !important;
+    }
+  }
   .service-img {
     display: block;
     margin: 0 auto;
     width: 100%;
     border-radius: 10px;
-    border: 5px solid #ffc107;
+    border: 5px solid #ec5d24;
   }
   
-  .service-description {
-    margin-top: 1rem;
-    text-align: justify;
-    text-justify: inter-word;
-    font-size: 16px;
-    font-weight: bold;
-  }
+  
  
   .service-button {
-    background-color: #ffc107;
+    
+    background-color: #ec5d24 !important;
     color: black;
     padding: 10px;
-    font-size: 16px;
+    font-size: 26px !important;
+    font-weight: bolder !important;
     line-height: 1.5;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
     width: 100%;
     z-index: 20;
     border: none !important;
+    /* font-family: 'Voltaire', sans-serif; */
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    border-radius: 40px;
+    white-space: nowrap;
   }
   .services .service-button:hover {
     background-color: black !important;
-    color: #ffc107 !important;
+    color: #ec5d24 !important;
     border: none !important;
   }
-  
+  @media(max-width:500px){
+    .service-button{
+      font-size: 22px !important;
+    }
+  }
   .service-enter {
     opacity: 0;
     transform: translateY(-50%);
@@ -149,3 +207,8 @@
     transition: all 1s ease-in-out;
   }
   
+  @media(min-width:2651px){
+    .services-title{
+      font-size: 212.08px;
+    }
+  }

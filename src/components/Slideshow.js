@@ -16,7 +16,7 @@ const HeroSection = () => {
 
   return (
     <div id="home" className="slide-section">
-      <div className="slideshow-container">
+      <div className="slide-container">
         {images.map((image, index) => (
           <div key={index} className={`slide ${index === currentImageIndex ? 'active' : ''}`}>
             <img src={image} alt={`Slide ${index + 1}`} />

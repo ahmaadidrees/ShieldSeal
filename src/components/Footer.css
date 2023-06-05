@@ -1,50 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Voltaire&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap');
 
 .footer-btn {
     padding: 12px 24px;
-    background-color: #ffc107;;
+    background-color: #ec5d24;;
     color: black;
-    font-size: 1vw;
+    font-size: 20px;
     white-space: nowrap;
     font-weight: bold;
-    border: 2px solid #ffc107;
+    border: 2px solid #ec5d24;
     border-radius: 50px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
-    margin-bottom: 50px; /* added margin-bottom */
+    margin-bottom: 10px; /* added margin-bottom */
+    margin-top: -30px;
   }
   .footer-btn:hover {
     background-color: black !important;
-    color: #ffc107 !important;
+    color: #ec5d24 !important;
     border: none !important;
   }
   .text-yellow{
-    color:#ffc107;
+    color:#ec5d24;
+    font-size: 30px;
   }
-  /* @media (max-width: 1290px) {
-    .footer-row {
-     
+  
+  .text-orange{
+    color:white;
+  }
+
+.footer-links{
+  font-size: 20px;
+}
+
+  .footer-icons:hover,
+  .footer-links li:hover,
+  .text-orange:hover {
+    color: #ec5d24;
+  }
+  @media(max-width:1199px) {
+    .text-yellow{
+      font-size: 25px;
     }
-  } */
+    .footer-links{
+      font-size: 18px;
+    }
+  }
+  @media(max-width:991px) {
+    .text-yellow{
+      font-size: 20px;
+    }
+    .footer-links{
+      font-size: 15px;
+    }
+  }
+  @media(max-width:767px) {
+    .text-yellow{
+      font-size: 30px;
+    }
+    .footer-links{
+      font-size: 25px;
+    }
+  }
+  @media(max-width:767px) {
+    .text-yellow{
+      font-size: 8vw;
+    }
+    .footer-links{
+      font-size: 6vw;
+    }
+  }
   .foot{
-    font-family: 'Voltaire', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     white-space: nowrap;
     flex-direction: column;
   }
-  .footer-container{
-    position: relative;
-    top: 70px;
-  }
-  @media (max-width: 1190px) {
-    .foot .row {
-      flex-direction: column;
-    }
-    .foot .col {
-      margin-bottom: 2rem;
-    }
-    .footer-container{
-        position: relative;
-        right: 70px;
-    }
-  }
+  /*  */
+  
   

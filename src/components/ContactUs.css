@@ -1,5 +1,5 @@
 .contact-btn {
-    background-color: #ffc107;
+    background-color: #ec5d24;
     color: black;
     padding: 10px;
     font-size: 16px;
@@ -12,7 +12,7 @@
   }
   .contact-btn:hover {
     background-color: black !important;
-    color: #ffc107 !important;
+    color: #ec5d24 !important;
     border: none !important;
   }
   

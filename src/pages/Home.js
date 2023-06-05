@@ -7,15 +7,16 @@ import HeroSection from '../components/HeroSection'
 import Slideshow from '../components/Slideshow'
 
 const Home = () => {
+  const isHome = true;
   return (
     <div>
        <Navbarr isHomePage={false} />
       <HeroSection />
       <Services />
       <Slideshow />
-      <AboutUs />
+      {/* <AboutUs /> */}
      
-      <Footer ></Footer>
+      <Footer isHome={isHome} ></Footer>
     </div>
   )
 }

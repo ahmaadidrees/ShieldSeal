@@ -8,7 +8,7 @@ const LinePainting = () => {
   const [email, setEmail] = useState('');
   const [address, setAddress] = useState('');
   const [notes, setNotes] = useState('');
-  const [selectedImage, setSelectedImage] = useState('/images/LinePainting.jpeg'); // Default selected image
+  const [selectedImage, setSelectedImage] = useState('/images/crackfilling.jpeg'); // Default selected image
 
   const handleSubmit = (event) => {
     event.preventDefault();

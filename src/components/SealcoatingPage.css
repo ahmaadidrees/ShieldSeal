@@ -1,98 +1,70 @@
-.page-container {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    margin-top: 50px;
-  }
-  
-  .left-container {
-    width: 50%;
-    padding-right: 20px;
-    margin-left: 50px;
-  }
-  
-  .page-title {
-    font-weight: bold;
-    text-decoration: underline;
-    font-size: 50px;
-    margin-bottom: 40px;
-  }
-  
-  .page-text {
-    font-size: 28px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-  }
-  
-  .right-container {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .page-image {
-    max-width: 80%;
-    height: auto;
-    margin-bottom: 20px;
-    border-radius: 10px;
-  border: 5px solid #ffc107;
-  }
-  
-  .contact-form {
-    width: 80%;
-    max-width: 400px;
-  }
-  
-  .form-title {
-    font-weight: bold;
-    text-decoration: underline;
-    margin-bottom: 20px;
-    font-size: 38px;
-  }
-  
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-  }
-  
-  label {
-    margin-bottom: 5px;
-    font-size: 20px;
-  }
-  
-  input,
-  textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    line-height: 1.5;
-  }
-  
-  input:focus,
-  textarea:focus {
-    outline: none;
-    border-color: #0080ff;
-  }
-  
-  .form-submit-button {
-    background-color: #ffc107;
-    color: black;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    line-height: 1.5;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-    width: 100%;
-  }
-  
-  .form-submit-button:hover {
-    background-color: black;
-    color: #ffc107;
-  }
-  
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap');
+
+.sealcoat-title {
+  font-family: 'Electrolize', sans-serif;
+  text-shadow: -2px -2px 0 #ec5d24, 2px -2px 0 #ec5d24, -2px 2px 0 #ec5d24, 2px 2px 0 #ec5d24;
+  font-weight: bold;
+  font-size: 150px;
+}
+
+.sealcoat-subtitle {
+  font-family: 'Electrolize', sans-serif;
+  font-weight: bold;
+  font-size: 60px;
+}
+@media(max-width:1399px) {
+    .sealcoat-subtitle{
+        font-size: 50px;
+    }
+}
+@media(max-width:1199px) {
+    .sealcoat-subtitle{
+        font-size: 40px;
+    }
+    .sealcoat-title{
+        font-size: 120px;
+    }
+}
+@media(max-width:991px) {
+    .sealcoat-subtitle{
+        font-size: 30px;
+    }
+}
+@media(max-width:767px) {
+    .sealcoat-subtitle{
+        font-size: 50px;
+    }
+    .sealcoat-title{
+        font-size: 80px;
+    }
+}
+@media(max-width:575px) {
+    .sealcoat-subtitle{
+        font-size: 11vw;
+    }
+    .sealcoat-title{
+        font-size: 15vw;
+    }
+}
+
+.sealcoat-container {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.sealpage-text {
+  margin-bottom: 20px;
+}
+
+.image-row .col-xs-4 {
+  transition: all 0.3s;
+}
+
+.image-row .col-xs-4:hover {
+  transform: scale(1.1);
+}
+
+.selected-image img {
+  border: 5px solid #ec5d24;
+}
+

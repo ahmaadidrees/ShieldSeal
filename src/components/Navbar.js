@@ -6,6 +6,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 import { FaPhone } from 'react-icons/fa';
+import {  IoClose, IoMenu } from 'react-icons/io5';
 
 
 function Navbarr({isHomePage}) {
@@ -47,35 +48,49 @@ function Navbarr({isHomePage}) {
       expanded={isNavExpanded}
     onToggle={handleNavToggle}
       variant={'dark'}
-      style={{
-        transition: 'background-color 0.5s ease-out'
-      }}
+      style={{paddingTop:0, marginTop: -32}}
+      
     >
-      <Container>
+     <Container style={{ minHeight: '130px', height: 'auto', display: 'flex !important', justifyContent: 'space-between !important'}}>
         <Link to='/' onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}}>
+          
         <img
-          style={{ height: '80px', width: '130px' }}
-          src='/images/shieldseal.png'
-          className='d-inline-block align-top'
+          // style={{ height: '250px', width: '250px', marginLeft:"0 !important", marginTop: -40, marginBottom: -40 }}
+          src='/images/sealtech.png'
+          className='d-inline-block align-top logo'
           alt='fuck'
         /></Link>
         {/* <Navbar.Brand className='nav-title' style={{ color: 'white',fontWeight: 'bold'}} as = {Link} to='/' onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}}>
           Shield Seal Pavement Co.
         </Navbar.Brand> */}
         <Navbar.Toggle
-          style={{ outline: 'none !important' }}
-          aria-controls='basic-navbar-nav'
-          className='menu'
-        />
-        <Navbar.Collapse id='basic-navbar-nav'>
-          <Nav className='ms-auto'>
+      style={{ border: 'none',outline: 'none', boxShadow: 'none !important' }}
+  aria-controls="basic-navbar-nav"
+  onClick={handleNavToggle}
+>
+{isNavExpanded ? (
+    <IoClose size={30} /> // Set the desired size for the close icon
+  ) : (
+    <IoMenu size={30} /> // Set the desired size for the menu icon
+  )}
+</Navbar.Toggle>
+
+        <Navbar.Collapse id='basic-navbar-nav' expanded ={isNavExpanded} style={{position:'relative'}}>
+          <Nav className='ms-auto '  >
             <Nav.Link className='nav-link' style={{ color: 'white' }} as = {Link} to='/' onClick={()=>{ handleNavClose(); window.scrollTo({ top: 0, behavior: 'smooth' });}}>
               Home
             </Nav.Link>
-            <Nav.Link className='nav-link' style={{ color: 'white' }} as={Link} to='/' onClick={() => { setTimeout(() => { handleNavClose(); document.getElementById('about').scrollIntoView({ behavior: 'smooth' });}, 200);  }}>
+            {/* <Nav.Link className='nav-link' style={{ color: 'white' }} as={Link} to='/' onClick={() => { setTimeout(() => { handleNavClose(); document.getElementById('about').scrollIntoView({ behavior: 'smooth' });}, 200);  }}>
               About Us
-            </Nav.Link>
-
+            </Nav.Link> */}
+            <NavDropdown
+              className='nav-dropdown'
+              title={<span className='my-nav-dropdown'>About Us</span>}
+              id='nav-dropdown'
+            >
+              <NavDropdown.Item as = {Link} to = '/sealcoat' onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}}>Our Story</NavDropdown.Item>
+              <NavDropdown.Item as = {Link} to = '/crack' onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}}>Why SealTech?</NavDropdown.Item>
+            </NavDropdown>
 
             <NavDropdown
               className='nav-dropdown'
@@ -89,6 +104,9 @@ function Navbarr({isHomePage}) {
             <Nav.Link as={Link} to = '/contact' onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}} style={{ color: 'white' }}>
               Contact
             </Nav.Link>
+            {/* <Nav.Link as={Link} to = '/contact' onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}} style={{ color: 'white' }}>
+              Why SealTech
+            </Nav.Link> */}
             <Nav.Link style={{ color: 'white' }} href='#link'>
               Gallery
             </Nav.Link>

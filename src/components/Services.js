@@ -29,7 +29,8 @@ function Services() {
               <p>
               Asphalt sealcoating on a regular basis will more than triple the life of your parking lot.
               </p>
-              <Button as = {Link} to = '/sealcoat' onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}} variant="warning" className="service-button">Learn More</Button>
+              <center>
+              <Button as = {Link} to = '/sealcoat' onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}} variant="warning" className="service-button">Learn More</Button></center>
             </div>
           </div>
           </CSSTransition>
@@ -47,7 +48,8 @@ function Services() {
               <p>
               Crack sealing is the first line of defence against water penetrating your asphalt.
               </p>
-              <Button as = {Link} to = '/crack' variant="warning" className="service-button" onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}} >Learn More</Button>
+              <center>
+              <Button as = {Link} to = '/crack' variant="warning" className="service-button" onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}} >Learn More</Button></center>
             </div>
           </div>
           </CSSTransition>
@@ -67,7 +69,8 @@ function Services() {
               <p>
               Line painting makes for a functional and safe parking lot for pedestrians and vehicles.
               </p>
-              <Button as = {Link} to= '/line'  variant="warning" className="service-button" onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}} >Learn More</Button>
+              <center>
+              <Button as = {Link} to= '/line'  variant="warning" className="service-button" onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}} >Learn More</Button></center>
             </div>
           </div>
           </CSSTransition>

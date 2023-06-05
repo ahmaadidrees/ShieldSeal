@@ -6,14 +6,18 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Voltaire&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
 
 /* Set the height of the hero section */
 .hero-section {
     height: 100vh;
     position: relative;
-    bottom: 96px;
-    margin-bottom: 200px;
+    bottom: 146px;
+    margin-bottom: 150px;
     overflow-x: hidden;
+    min-height:600px;
   }
 
   
@@ -36,6 +40,7 @@
     left: 0;
     width: 100%;
     height: 100vh;
+    min-height: 800px;
     object-fit: cover;
     z-index: 0;
   }
@@ -60,12 +65,14 @@
     color: #ffffff;
     font-size:2vw;
     font-weight: bolder;
-    border: 2px solid #ffc107;
+    border: 2px solid #ec5d24;
     border-radius: 50px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
     margin-bottom: 50px; /* added margin-bottom */
-    font-family: 'Voltaire', sans-serif;  }
+    /* font-family: 'Voltaire', sans-serif; */
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    }
   /* @media (max-width: 400px) {
     .hero-button{
       font-size: 80%;
@@ -75,21 +82,24 @@
 
   /* Set the styles for the book now button on hover */
   .hero-button:hover {
-    background-color: #ffc107;
+    background-color: #ec5d24;
     color: #000000;
   }
   
   
   /* Styles for hero title */
   .hero-title {
-    font-size: 5vw;
-    /* font-weight: bold; */
+    font-size: 7vw;
+    font-weight: bold;
     color: #ffffff;
     text-align: center;
-    margin-bottom: -10px; /* updated value */
+    margin-bottom: 200px; /* updated value */
   /* font-family: 'Boogaloo', cursive; */
   /* font-family: 'Bungee Shade', cursive; */
-  font-family: 'My Font', sans-serif;
+  /* font-family: 'Russo One', sans-serif; */
+  font-family: 'Graduate', cursive;
+  text-shadow: -2px -2px 0 #ec5d24, 2px -2px 0 #ec5d24, -2px 2px 0 #ec5d24, 2px 2px 0 #ec5d24;
+
 
   }
   
@@ -101,7 +111,8 @@
     text-align: center;
     margin-top: 120px; /* added margin-top */
     margin-bottom: -10px; /* added margin-bottom */
-    font-family: 'Voltaire', sans-serif;     }
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: bolder;     }
   
   
 
@@ -116,7 +127,51 @@
     max-width: 80%;
     white-space: nowrap;
   }
-  @media (min-width: 1720px) {
+  /* max sizes for hero content */
+  @media (min-width:3095px){
+    .hero-title{
+      font-size: 216.65px;
+    }
+    .hero-subtitle{
+      font-size: 92.85px;
+    }
+    .hero-button{
+      font-size: 61.9px;
+    }
+  }
+  @media (max-width: 991px) {
+    .hero-title{
+      font-size: 7.5vw;
+      margin-bottom: 100px;
+    }
+    .hero-subtitle{
+      font-size: 3.5vw;
+    }
+    .hero-button{
+      font-size: 3vw;
+    }
+    .hero-content{
+     
+      top: 35%;
+    }
+  }
+  @media (max-width: 400px){
+    .hero-title{
+      font-size: 7.5vw;
+      margin-bottom: 60px;
+    }
+    .hero-subtitle{
+      font-size: 3.5vw;
+    }
+    .hero-button{
+      font-size: 4vw;
+    }
+    .hero-content{
+     
+      top: 35%;
+    }
+  }
+  /* @media (min-width: 1720px) {
     .hero-title{
       font-size: 86px;
     }
@@ -126,7 +181,7 @@
     .hero-subtitle{
       font-size: 51.6px;
     }
-  }
+  } */
 
   /* @media screen and (max-width: 768px) {
     .hero-title {
