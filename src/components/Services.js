@@ -3,6 +3,7 @@ import { Container, Button } from 'react-bootstrap';
 import './Services.css';
 import { Link } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
+import { FaArrowRight } from 'react-icons/fa';
 
 
 function Services() {
@@ -30,7 +31,7 @@ function Services() {
               Asphalt sealcoating on a regular basis will more than triple the life of your parking lot.
               </p>
               <center>
-              <Button as = {Link} to = '/sealcoat' onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}} variant="warning" className="service-button">Learn More</Button></center>
+              <Button as = {Link} to = '/sealcoat' onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}} variant="warning" className="service-button">Learn More <FaArrowRight/></Button></center>
             </div>
           </div>
           </CSSTransition>
@@ -49,7 +50,7 @@ function Services() {
               Crack sealing is the first line of defence against water penetrating your asphalt.
               </p>
               <center>
-              <Button as = {Link} to = '/crack' variant="warning" className="service-button" onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}} >Learn More</Button></center>
+              <Button as = {Link} to = '/crack' variant="warning" className="service-button" onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}} >Learn More <FaArrowRight/></Button></center>
             </div>
           </div>
           </CSSTransition>
@@ -70,7 +71,7 @@ function Services() {
               Line painting makes for a functional and safe parking lot for pedestrians and vehicles.
               </p>
               <center>
-              <Button as = {Link} to= '/line'  variant="warning" className="service-button" onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}} >Learn More</Button></center>
+              <Button as = {Link} to= '/line'  variant="warning" className="service-button" onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}} >Learn More <FaArrowRight/></Button></center>
             </div>
           </div>
           </CSSTransition>

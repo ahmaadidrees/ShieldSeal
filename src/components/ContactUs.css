@@ -1,11 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+
+
+
 .contact-btn {
-    background-color: #ec5d24;
+    background-color: #ec5d24 !important;
     color: black;
     padding: 10px;
     font-size: 16px;
     line-height: 1.5;
     cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.4s ease-in-out;
     width: 100%;
     z-index: 20;
     border: none !important;
@@ -15,4 +20,35 @@
     color: #ec5d24 !important;
     border: none !important;
   }
-  
+  .contact-container{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+
+
+  }
+  .contact-title{
+    font-family: 'Electrolize', sans-serif;
+  text-shadow: -2px -2px 0 #ec5d24, 2px -2px 0 #ec5d24, -2px 2px 0 #ec5d24, 2px 2px 0 #ec5d24;
+  font-size:100px;
+  margin-top: -30px;
+  }
+  .iconButt{
+    background:#ec5d24; 
+    border-radius:100px; 
+    width:23%;
+    transition: background 0.4s ease-in-out;
+  }
+  .iconButt{
+    color: black;
+  }
+  .iconButt:hover{
+    background: black;
+  }
+  .contact-icon:hover{
+    color: #ec5d24;
+  }
+  .contact-link{
+    color:black
+  }
+  .contact-link:hover{
+    color: #ec5d24;
+  }

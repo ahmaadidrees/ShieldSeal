@@ -1,0 +1,119 @@
+.review-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .review-row-mobile {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .arrow-row {
+    margin-top: 10px;
+  }
+  
+  .arrow-icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .arrow-icon svg {
+    font-size: 20px;
+  }
+  
+  .arrow-icon.left {
+    margin-right: 5px;
+  }
+  
+  .arrow-icon.right {
+    margin-left: 5px;
+  }
+  
+  @media (max-width: 767px) {
+    .review-row-mobile .col-md-4 {
+      display: none;
+    }
+    .review-row-mobile .col-md-4:nth-child(2) {
+      display: block;
+    }
+  }
+  
+  .review-container {
+    background-image: url('/public/images/review.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    min-width: 100%;
+    position: relative;
+    z-index: 0;
+    padding-left: -500px;
+    padding-right: -500px;
+  }
+  
+  .review-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 165, 0, 0.5); /* Orange tint */
+    z-index: -1;
+  }
+  
+  .profile-pic {
+    position: absolute;
+    top: 5px;
+    left: 10;
+  }
+  
+  .star-icon {
+    color: #fdd835;
+    margin-right: 2px;
+  }
+  
+  .card-text-content {
+    max-height: 70px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .card-text-content.expanded {
+    max-height: none;
+  }
+  
+  .read-more-button {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 5px;
+  }
+  .review-card {
+    height: 100%;
+  }
+  
+  .card-text-content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* Limit the number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+  
+  .card-text-content.expanded {
+    -webkit-line-clamp: unset; /* Display all lines when expanded */
+  }
+  
+  .read-more-button {
+    background: none;
+    border: none;
+    color: blue;
+    cursor: pointer;
+  }
+  
+  /* Existing styles... */
+  

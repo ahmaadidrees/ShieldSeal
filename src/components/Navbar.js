@@ -51,7 +51,7 @@ function Navbarr({isHomePage}) {
       style={{paddingTop:0, marginTop: -32}}
       
     >
-     <Container style={{ minHeight: '130px', height: 'auto', display: 'flex !important', justifyContent: 'space-between !important'}}>
+     <Container style={{ minHeight: '120px', height: 'auto', display: 'flex !important', justifyContent: 'space-between !important'}}>
         <Link to='/' onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}}>
           
         <img
@@ -75,7 +75,7 @@ function Navbarr({isHomePage}) {
   )}
 </Navbar.Toggle>
 
-        <Navbar.Collapse id='basic-navbar-nav' expanded ={isNavExpanded} style={{position:'relative'}}>
+        <Navbar.Collapse className='toDaRight' id='basic-navbar-nav' expanded ={isNavExpanded} >
           <Nav className='ms-auto '  >
             <Nav.Link className='nav-link' style={{ color: 'white' }} as = {Link} to='/' onClick={()=>{ handleNavClose(); window.scrollTo({ top: 0, behavior: 'smooth' });}}>
               Home
@@ -88,8 +88,8 @@ function Navbarr({isHomePage}) {
               title={<span className='my-nav-dropdown'>About Us</span>}
               id='nav-dropdown'
             >
-              <NavDropdown.Item as = {Link} to = '/sealcoat' onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}}>Our Story</NavDropdown.Item>
-              <NavDropdown.Item as = {Link} to = '/crack' onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}}>Why SealTech?</NavDropdown.Item>
+              <NavDropdown.Item as = {Link} to = '/our-story' onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}}>Our Story</NavDropdown.Item>
+              <NavDropdown.Item as = {Link} to = '/why-sealtech' onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}}>Why SealTech?</NavDropdown.Item>
             </NavDropdown>
 
             <NavDropdown
@@ -101,8 +101,8 @@ function Navbarr({isHomePage}) {
               <NavDropdown.Item as = {Link} to = '/crack' onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}}>Crack Filling</NavDropdown.Item>
               <NavDropdown.Item as = {Link} to = '/line'onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}}>Line Painting</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link as={Link} to = '/contact' onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}} style={{ color: 'white' }}>
-              Contact
+            <Nav.Link as={Link} to = '/blog' onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}} style={{ color: 'white' }}>
+              Blog
             </Nav.Link>
             {/* <Nav.Link as={Link} to = '/contact' onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}} style={{ color: 'white' }}>
               Why SealTech
@@ -110,7 +110,7 @@ function Navbarr({isHomePage}) {
             <Nav.Link style={{ color: 'white' }} href='#link'>
               Gallery
             </Nav.Link>
-            <Nav.Link style={{ color: 'white' }} href='tel:+1234567890'>
+            <Nav.Link as = {Link} to = '/contact'onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}} style={{ color: 'white' }} >
              <FaPhone style={{height:'30px', width:'30px'}} />
             </Nav.Link>
           </Nav>

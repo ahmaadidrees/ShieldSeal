@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './HeroSection.css';
 import { Link } from 'react-router-dom';
+import { FaArrowRight } from 'react-icons/fa';
 
 const HeroSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -24,9 +25,9 @@ const HeroSection = () => {
         ))}
         <div className="hero-content">
           <h1 className="hero-title">COVER YOUR ASPHALT</h1>
-          <h2 className="hero-subtitle">The Bay Area's #1 Pavement Maintenance Company</h2>
+          <h2 className="hero-subtitle">Bay Area's #1 Pavement Maintenance Company</h2>
           <Link to='/contact'>
-          <button className="hero-button">Contact Us Today</button></Link>
+          <button className="hero-button">Get A Quote <FaArrowRight/></button></Link>
         </div>
       </div>
     </div>

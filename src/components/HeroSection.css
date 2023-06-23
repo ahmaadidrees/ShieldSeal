@@ -14,8 +14,7 @@
 .hero-section {
     height: 100vh;
     position: relative;
-    bottom: 146px;
-    margin-bottom: 150px;
+    margin-bottom: 200px;
     overflow-x: hidden;
     min-height:600px;
   }
@@ -65,7 +64,7 @@
     color: #ffffff;
     font-size:2vw;
     font-weight: bolder;
-    border: 2px solid #ec5d24;
+    border: 6px solid #ec5d24;
     border-radius: 50px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -89,7 +88,7 @@
   
   /* Styles for hero title */
   .hero-title {
-    font-size: 7vw;
+    font-size: 6.5vw;
     font-weight: bold;
     color: #ffffff;
     text-align: center;
@@ -128,12 +127,12 @@
     white-space: nowrap;
   }
   /* max sizes for hero content */
-  @media (min-width:3095px){
+  @media (min-width:2095px){
     .hero-title{
-      font-size: 216.65px;
+      font-size: 150px;
     }
     .hero-subtitle{
-      font-size: 92.85px;
+      font-size: 80px;
     }
     .hero-button{
       font-size: 61.9px;
@@ -141,11 +140,11 @@
   }
   @media (max-width: 991px) {
     .hero-title{
-      font-size: 7.5vw;
+      font-size: 6vw;
       margin-bottom: 100px;
     }
     .hero-subtitle{
-      font-size: 3.5vw;
+      font-size: 3vw;
     }
     .hero-button{
       font-size: 3vw;
@@ -157,11 +156,11 @@
   }
   @media (max-width: 400px){
     .hero-title{
-      font-size: 7.5vw;
+      font-size: 5.5vw;
       margin-bottom: 60px;
     }
     .hero-subtitle{
-      font-size: 3.5vw;
+      font-size: 2.5vw;
     }
     .hero-button{
       font-size: 4vw;

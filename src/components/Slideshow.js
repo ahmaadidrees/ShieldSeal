@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './Slideshow.css';
 import { Link } from 'react-router-dom';
+import { FaArrowRight } from 'react-icons/fa';
 
 const HeroSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const images = ['/Images/sealcoat.jpeg', '/Images/LinePainting.jpeg', '/Images/crackfilling.jpeg'];
+  const images = ['/Images/tool6.png','/Images/tool5.png','/Images/tool4.png','/Images/tool3.png','/Images/tool2.png','/Images/tool1.png','/Images/sealcoat.jpeg', '/Images/LinePainting.jpeg', '/Images/crackfilling.jpeg'];
 
 
   useEffect(() => {
@@ -26,7 +27,7 @@ const HeroSection = () => {
           <h1 className="slide-title">Get The Most Out Of Your Asphalt Parking Lot – 100% Satisfaction!</h1>
           <h2 className="slide-subtitle">We Provide A Full Range Of Asphalt Paving, Repair, & Maintenance Services</h2>
           <Link to = "/contact#top" >
-          <button className="free-quote">Contact Us Today</button></Link>
+          <button onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}} className="free-quote">Contact Us Today <FaArrowRight/></button></Link>
         </div>
       </div>
     </div>

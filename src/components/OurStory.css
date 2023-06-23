@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+
+.ourStory-title{
+    font-family: 'Electrolize', sans-serif;
+    text-shadow: -2px -2px 0 #ec5d24, 2px -2px 0 #ec5d24, -2px 2px 0 #ec5d24, 2px 2px 0 #ec5d24;
+    font-size: 5vw;
+    margin-bottom: -100px;
+}

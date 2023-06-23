@@ -6,6 +6,10 @@ import SealcoatPage from './pages/SealcoatPage';
 import CrackFillingPage from './pages/CrackFillingPage';
 import LinePaintingPage from './pages/LinePaintingPage';
 import ContactPage from './pages/ContactPage';
+import OurStoryPage from './pages/OurStoryPage';
+import WhySealTechPage from './pages/WhySealTechPage';
+import BlogPage from './pages/BlogPage';
+
 
 // function ScrollToTop() {
 //   const { pathname } = useLocation();
@@ -27,6 +31,11 @@ function App() {
           <Route path="/crack" element={<CrackFillingPage />} />
           <Route path="/line" element={<LinePaintingPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path = "/our-story" element={<OurStoryPage/>} />
+          <Route path = "/why-sealtech" element={<WhySealTechPage/>} />
+          <Route path="/blog" element={<BlogPage />} />
+
+
         </Routes>
       </div>
     </Router>
